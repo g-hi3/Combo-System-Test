@@ -58,6 +58,7 @@ namespace ConsoleApp1
       } while (decision != Decision.None);
       Console.WriteLine("======================");
       Console.WriteLine("Thank you for playing!");
+      Console.WriteLine("Press any key to exit ...");
       Console.ReadKey();
     }
 
