@@ -21,21 +21,33 @@ namespace ConsoleApp1
         switch (keyInfo.Key)
         {
           case ConsoleKey.D0:
+          case ConsoleKey.Q:
+          case ConsoleKey.Escape:
             decision = Decision.None;
             break;
           case ConsoleKey.D6:
+          case ConsoleKey.D: 
+          case ConsoleKey.RightArrow:
             decision = Decision.Right;
             break;
           case ConsoleKey.D2:
+          case ConsoleKey.S:
+          case ConsoleKey.DownArrow:
             decision = Decision.Down;
             break;
           case ConsoleKey.D4:
+          case ConsoleKey.A:
+          case ConsoleKey.LeftArrow:
             decision = Decision.Left;
             break;
           case ConsoleKey.D8:
+          case ConsoleKey.W:
+          case ConsoleKey.UpArrow:
             decision = Decision.Up;
             break;
           case ConsoleKey.D5:
+          case ConsoleKey.E:
+          case ConsoleKey.Enter:
             decision = Decision.PrintTree;
             break;
           default:
@@ -67,12 +79,12 @@ namespace ConsoleApp1
     static void PrintOptions()
     {
       Console.WriteLine("Pick a decision:");
-      Console.WriteLine(" 6: Right");
-      Console.WriteLine(" 2: Down");
-      Console.WriteLine(" 4: Left");
-      Console.WriteLine(" 8: Up");
-      Console.WriteLine(" 5: Print Combo");
-      Console.WriteLine(" 0: Quit");
+      Console.WriteLine(" 6|D: Right");
+      Console.WriteLine(" 2|S: Down");
+      Console.WriteLine(" 4|A: Left");
+      Console.WriteLine(" 8|W: Up");
+      Console.WriteLine(" 5|E: Print Combo");
+      Console.WriteLine(" 0|Q: Quit");
     }
 
     static void ExecuteDecision(Decision decision)
